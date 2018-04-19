@@ -239,7 +239,7 @@ public class StubRequest {
    }
 
    @VisibleForTesting boolean isPostStubbed() {
-      return isSet(this.getPostBody()) && (getMethod().contains("POST") || getMethod().contains("PUT"));
+      return isSet(this.getPostBody()) && (getMethod().contains("POST") || getMethod().contains("PUT") | getMethod().contains("PATCH"));
    }
 
    private boolean urlsMatch(final String dataStoreUrl, final String thisAssertingUrl) {
